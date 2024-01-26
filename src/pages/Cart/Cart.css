@@ -1,0 +1,91 @@
+.mainCart {
+  padding: 30px;
+}
+.cart {
+  display: flex;
+  gap: 20px;
+}
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0.6;
+}
+.item {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  /* gap: 10px; */
+  border-radius: 10px;
+  border: none;
+  align-items: center;
+  /* box-shadow: -10px 10px 10px rgb(214, 214, 214); */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.item img {
+  width: 130px;
+  height: 70px;
+  object-fit: contain;
+}
+.cartBill {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.billItems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.billItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+.payoutBtn {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.quantityBtns {
+  border: none;
+  background-color: black;
+  color: white;
+  /* padding: 3px 5px; */
+  width: 16px;
+  height: 20px;
+  border-radius: 2px;
+}
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+}
+.price {
+  font-weight: 600;
+}
+.cartItem2 {
+  display: flex;
+  /* gap: 6px; */
+  justify-content: space-between;
+  width: 38%;
+}
+.cartItem1 {
+  display: flex;
+  align-items: center;
+}

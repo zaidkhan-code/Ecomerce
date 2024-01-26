@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+}
+.tabsLinks {
+  display: flex;
+  gap: 30px;
+}
+.tabsLinks a {
+  text-decoration: none;
+  color: black;
+}
+.headerSearch {
+  padding: 10px;
+  width: 300px;
+  /* background-color: red; */
+  border-radius: 10px;
+  border: 2px solid rgb(173, 173, 173);
+}
+.cartBtn {
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.cartBtn img {
+  width: 20px;
+}
+.noInCarts {
+  background-color: black;
+  color: white;
+}
+.web-name a {
+  text-decoration: none;
+  color: black;
+}

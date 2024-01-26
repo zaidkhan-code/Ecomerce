@@ -1,0 +1,33 @@
+.productPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+}
+.productPage > div {
+  width: 75%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.productDetails {
+  margin-top: 20px;
+  display: flex;
+  gap: 60px;
+  /* background-color: red; */
+}
+.productImg img {
+  width: 560px;
+  height: 350px;
+  object-fit: contain;
+}
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productDescription h2 {
+  margin: 0;
+}

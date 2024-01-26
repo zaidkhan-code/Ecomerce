@@ -1,0 +1,10 @@
+.products {
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.productLink {
+  color: black;
+  text-decoration: none;
+}
