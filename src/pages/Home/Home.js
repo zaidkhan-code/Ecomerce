@@ -38,9 +38,29 @@ const Home = () => {
     <Layout>
       <div className="products">
         {category
-          ? products.map((product) => {
-              return <ProductElement product={product} />;
-            })
+          ? productCtx.search
+            ? products
+                .filter((product) => {
+                  return product.title
+                    .toLowerCase()
+                    .includes(productCtx.search.toLowerCase());
+                })
+                .map((product) => {
+                  return <ProductElement key={product.id} product={product} />;
+                })
+            : products.map((product) => {
+                return <ProductElement product={product} />;
+              })
+          : productCtx.search
+          ? productCtx.products
+              .filter((product) => {
+                return product.title
+                  .toLowerCase()
+                  .includes(productCtx.search.toLowerCase());
+              })
+              .map((product) => {
+                return <ProductElement key={product.id} product={product} />;
+              })
           : productCtx.products.map((product) => {
               return <ProductElement key={product.id} product={product} />;
             })}

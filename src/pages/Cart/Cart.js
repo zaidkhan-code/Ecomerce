@@ -4,6 +4,8 @@ import Layout from "../../components/Layout/Layout";
 import CartContext from "../../store/cart-context";
 import { useContext } from "react";
 const Cart = () => {
+  const cartCtx = useContext(CartContext);
+
   const productQuantityHandler = (operation, item) => {
     if (operation === "plus") {
       cartCtx.addItem(item);
@@ -11,10 +13,19 @@ const Cart = () => {
       cartCtx.removeItem(item.id);
     }
   };
+  const payoutSuccess = () => {
+    if (cartCtx.totalAmount == 0) {
+      alert("You have nothing in cart");
+    } else
+      alert(
+        "You have successfully Purchased products of cost" +
+          " $" +
+          cartCtx.totalAmount
+      );
+  };
   const deleteItemHandler = (id) => {
     cartCtx.deleteItem(id);
   };
-  const cartCtx = useContext(CartContext);
   console.log(cartCtx.items);
   return (
     <Layout>
@@ -83,7 +94,7 @@ const Cart = () => {
                 );
               })}
             </div>
-            <button className="payoutBtn">
+            <button className="payoutBtn" onClick={payoutSuccess}>
               Payout <span>${cartCtx.totalAmount}</span>
             </button>
           </div>
