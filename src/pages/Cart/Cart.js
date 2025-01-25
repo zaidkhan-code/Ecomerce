@@ -20,7 +20,7 @@ const Cart = () => {
       alert(
         "You have successfully Purchased products of cost" +
           " $" +
-          cartCtx.totalAmount
+          cartCtx.totalAmount.toFixed(2)
       );
   };
   const deleteItemHandler = (id) => {
@@ -95,7 +95,13 @@ const Cart = () => {
               })}
             </div>
             <button className="payoutBtn" onClick={payoutSuccess}>
-              Payout <span>${cartCtx.totalAmount}</span>
+              Payout{" "}
+              <span>
+                $
+                {cartCtx.items.length === 0
+                  ? "0"
+                  : cartCtx.totalAmount.toFixed(2)}
+              </span>
             </button>
           </div>
         </div>

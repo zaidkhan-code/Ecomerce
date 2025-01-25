@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="header">
       <h2 className="web-name">
-        <Link to="/">Ecommerence</Link>
+        <Link to="/">Ecommerce</Link>
       </h2>
       <div className="tabsLinks">
         <NavLink to="/products/category/electronics">Electronics</NavLink>
